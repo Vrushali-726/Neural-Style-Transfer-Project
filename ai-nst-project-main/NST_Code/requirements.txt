@@ -1,0 +1,8 @@
+Flask
+Flask-WTF
+Flask-Bootstrap
+WTForms
+Pillow
+torch
+torchvision
+gunicorn
