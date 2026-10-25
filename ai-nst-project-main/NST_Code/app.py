@@ -67,14 +67,13 @@ encoder = VGGEncoder(encoder_path).to(device)
 decoder = Decoder().to(device)
 
 decoder.load_state_dict(
-    torch.load(decoder_path, map_location=device)
+    torch.load(decoder_path, map_location="cpu", weights_only=True)
 )
 
 encoder.eval()
 decoder.eval()
 
 print(f"Models loaded successfully on {device}")
-
 
 # --------------------------------------------------
 # Helpers
